@@ -10,3 +10,6 @@
 - [x] Add dark/light theme toggle
 - [x] Add fixed top bar
 - [x] Add scrolling only inside the main content area
+- [] Add the DB Schema
+- [] Make the login page
+- [] Authentication and authorizisation
