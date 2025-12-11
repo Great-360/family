@@ -1,15 +1,15 @@
-# TODO: App Enhancements
+# Frontend-Backend Integration with Axios - TODO
 
 ## Completed Tasks
-- [x] Update App.tsx for responsive layout
-- [x] Modify Sidebar.tsx to be collapsible on smaller screens
-- [x] Edit App.css to remove max-width and padding restrictions
-- [x] Adjust index.css for full-screen layout
-- [x] Test responsiveness on different screen sizes
-- [x] Make sidebar collapsible (ensure it's properly implemented)
-- [x] Add dark/light theme toggle
-- [x] Add fixed top bar
-- [x] Add scrolling only inside the main content area
-- [] Add the DB Schema
-- [] Make the login page
-- [] Authentication and authorizisation
+- [x] Install Axios in the frontend
+- [x] Create API service file (frontend/src/services/api.ts) with Axios instance configured to backend (http://localhost:3000/api)
+- [x] Set up request/response interceptors for authentication token handling
+- [x] Define auth API functions: register, login, getMe, linkPerson, updateUserRole
+- [x] Define persons API functions: getPersons, getPerson, createPerson, updatePerson, deletePerson, createMarriage
+- [x] Add TypeScript types for better type safety
+
+## Next Steps
+- [ ] Integrate API calls into React components (e.g., login form, person list)
+- [ ] Add error handling and loading states in components
+- [ ] Implement authentication context/state management
+- [ ] Test API integration with running backend server
