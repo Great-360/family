@@ -4,22 +4,24 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Sidebar from "./components/Sidebar";
 import { BackendAuthProvider } from "./contexts/BackendAuthContext";
 import Dashboard from "./pages/Dashboard";
-import Overview from "./pages/Overview";
+// import Overview from "./pages/Overview";
 import FamilyTree from "./pages/FamilyTree";
 import Members from "./pages/Members";
 import Generations from "./pages/Generations";
 import Settings from "./pages/Settings";
 import Form from "./auth/Form";
+import Topbar from "./components/Topbar";
 
 function AppContent() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen h-full w-full flex bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen h-full w-full flex bg-white dark:bg-gray-800">
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
       <div className="flex-1 flex flex-col md:ml-0">
-        <main className="flex-1 p-6 overflow-y-auto mt-16 bg-gray-100 dark:bg-gray-900">
+        <Topbar />
+        <main className="flex-1 p-6 overflow-y-auto bg-white dark:bg-gray-800">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/tree" element={<FamilyTree />} />
