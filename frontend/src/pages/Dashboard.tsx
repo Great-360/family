@@ -1,7 +1,7 @@
 import React from "react";
 import FamilyTree from "./FamilyTree";
-import Members from "./Members";
-import Generations from "./Generations";
+// import Members           from "./Members";
+// import Generations from "./Generations";
 
 const Dashboard: React.FC = () => {
   return (

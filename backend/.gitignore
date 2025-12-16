@@ -24,6 +24,9 @@ dist-ssr
 *.sln
 *.sw?
 
+.env
+.env.local
+
 /generated/prisma
 .env
 .env.local
