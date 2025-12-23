@@ -6,6 +6,7 @@ interface PersonCardProps {
   image: string;
   variant?: "primary" | "secondary";
   badge?: string;
+  relationship?: string;
 }
 
 const PersonCard: React.FC<PersonCardProps> = ({
@@ -14,6 +15,7 @@ const PersonCard: React.FC<PersonCardProps> = ({
   image,
   variant = "secondary",
   badge,
+  relationship,
 }) => {
   const isPrimary = variant === "primary";
 
@@ -42,6 +44,11 @@ const PersonCard: React.FC<PersonCardProps> = ({
         <p className={isPrimary ? "text-white" : "text-gray-500 dark:text-gray-300"}>
           ({birthYear})
         </p>
+        {relationship && (
+          <p className={`text-sm ${isPrimary ? "text-white" : "text-gray-400 dark:text-gray-400"}`}>
+            {relationship}
+          </p>
+        )}
       </div>
     </div>
   );

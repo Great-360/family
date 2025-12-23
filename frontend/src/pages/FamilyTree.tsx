@@ -8,6 +8,7 @@ interface Person {
   image: string;
   variant?: "primary" | "secondary";
   badge?: string;
+  relationship?: string;
 }
 
 const HorizontalConnector: React.FC = () => (
@@ -29,11 +30,11 @@ const FamilyTree: React.FC = () => {
   const father: Person = { id: 1, name: "Mark", birthYear: 1960, image: "/placeholder.jpg", variant: "secondary" };
   const mother: Person = { id: 2, name: "Anna", birthYear: 1962, image: "/placeholder.jpg", variant: "secondary" };
 
-  const child1: Person = { id: 3, name: "Paul", birthYear: 1990, image: "/placeholder.jpg", variant: "secondary" };
-  const child2: Person = { id: 4, name: "Sara", birthYear: 1992, image: "/placeholder.jpg", variant: "secondary" };
+  const child1: Person = { id: 3, name: "Paul", birthYear: 1990, image: "/placeholder.jpg", variant: "secondary", relationship: "Son of Mark and Anna" };
+  const child2: Person = { id: 4, name: "Sara", birthYear: 1992, image: "/placeholder.jpg", variant: "secondary", relationship: "Daughter of Mark and Anna" };
 
-  const grandChild1: Person = { id: 5, name: "Noah", birthYear: 2020, image: "/placeholder.jpg", variant: "secondary" };
-  const grandChild2: Person = { id: 6, name: "Lily", birthYear: 2022, image: "/placeholder.jpg", variant: "secondary" };
+  const grandChild1: Person = { id: 5, name: "Noah", birthYear: 2020, image: "/placeholder.jpg", variant: "secondary", relationship: "Grandson of Mark and Anna" };
+  const grandChild2: Person = { id: 6, name: "Lily", birthYear: 2022, image: "/placeholder.jpg", variant: "secondary", relationship: "Granddaughter of Mark and Anna" };
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-800 flex justify-center p-10">
@@ -49,9 +50,9 @@ const FamilyTree: React.FC = () => {
         {/* Children */}
         <div className="flex gap-32">
           <div className="flex flex-col items-center">
-            <PersonCard name={child1.name} birthYear={child1.birthYear} image={child1.image} variant={child1.variant} />
+            <PersonCard name={child1.name} birthYear={child1.birthYear} image={child1.image} variant={child1.variant} relationship={child1.relationship} />
             <VerticalConnector />
-            <PersonCard name={grandChild1.name} birthYear={grandChild1.birthYear} image={grandChild1.image} variant={grandChild1.variant} />
+            <PersonCard name={grandChild1.name} birthYear={grandChild1.birthYear} image={grandChild1.image} variant={grandChild1.variant} relationship={grandChild1.relationship} />
           </div>
 
           <div className="flex flex-col items-center">
