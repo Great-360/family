@@ -11,6 +11,7 @@ import Generations from "./pages/Generations";
 import Settings from "./pages/Settings";
 import ProfilePage from "./pages/ProfilePage";
 import Topbar from "./components/Topbar";
+import AdminPage from "./pages/AdminPage";
 
 function AppContent() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -29,6 +30,7 @@ function AppContent() {
             <Route path="/generations" element={<Generations />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/admin" element={<AdminPage/>} />
           </Routes>
         </main>
       </div>

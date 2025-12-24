@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Users, 
-  UserCheck, 
-  UserX, 
+  Users,  
   Clock, 
   CheckCircle, 
   XCircle,
@@ -86,6 +84,7 @@ const AdminPage: React.FC = () => {
   // Check if user is admin
   useEffect(() => {
     if (!isAuthenticated || user?.role !== 'ADMIN') {
+      console.log('Access denied: Admins only');
       navigate('/');
     }
   }, [isAuthenticated, user, navigate]);
